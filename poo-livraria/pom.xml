@@ -6,11 +6,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.codingraja.servlet</groupId>
-  <artifactId>geren-prod-web2.1</artifactId>
+  <artifactId>poo-livraria</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>geren-prod-web2.1</name>
+  <name>poo-livraria</name>
     
   <dependencies>
     <dependency>
