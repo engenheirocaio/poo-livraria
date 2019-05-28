@@ -32,7 +32,6 @@ public final class Usuario {
   private boolean acessaCliente = false;
   private boolean acessaAluguel = false;
   private boolean acessaDevolucao = false;
-  private boolean acessaRelatorio = false;
   private boolean acessaTi = false;
   private boolean acessaAdministracao = false;
   private boolean isGlobal = false;
@@ -129,9 +128,6 @@ public final class Usuario {
       acessaDevolucao = true;
     }
     
-    if (Arrays.asList(D, GGR, GRR, FM, GGV, GRV, GGT, GRT, GGA, FA).contains(this.nomeDepartamento)) {
-      acessaRelatorio = true;
-    }
     
     if (Arrays.asList(D, GGT, GRT, EST).contains(this.nomeDepartamento)) {
       acessaTi = true;
@@ -234,9 +230,6 @@ public final class Usuario {
     return acessaDevolucao;
   }
 
-  public boolean acessaRelatorio() {
-    return acessaRelatorio;
-  }
 
   public boolean acessaTi() {
     return acessaTi;
