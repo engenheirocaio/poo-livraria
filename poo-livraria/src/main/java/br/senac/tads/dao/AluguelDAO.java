@@ -17,10 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- *
- * @author Gustavo
- */
+
 public class AluguelDAO implements CrudInterface<Aluguel> {
 
   @Override

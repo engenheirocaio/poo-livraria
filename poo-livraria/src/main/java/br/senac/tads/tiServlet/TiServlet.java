@@ -22,10 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-/**
- *
- * @author Bruna
- */
+
 @WebServlet(name = "TiServlet", urlPatterns = {"/ti"})
 public class TiServlet extends HttpServlet {
   

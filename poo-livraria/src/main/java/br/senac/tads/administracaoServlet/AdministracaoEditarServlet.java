@@ -5,10 +5,6 @@
  */
 package br.senac.tads.administracaoServlet;
 
-/**
- *
- * @author caio.araujo
- */
 import br.senac.tads.dao.CrudInterface;
 import br.senac.tads.dao.AdministracaoDAO;
 import br.senac.tads.model.Administracao;

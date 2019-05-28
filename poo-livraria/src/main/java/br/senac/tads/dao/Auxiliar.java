@@ -9,10 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- *
- * @author mac-ale
- */
+
 public class Auxiliar {
         
     public static Date InputDateToUtilDate(String inputDate)

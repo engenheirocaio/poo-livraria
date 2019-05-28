@@ -22,10 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-/**
- *
- * @author Bruna
- */
+
 @WebServlet(name = "TiDesativarServlet", urlPatterns = {"/ti/desativar"})
 public class TiDesativarServlet extends HttpServlet {
 

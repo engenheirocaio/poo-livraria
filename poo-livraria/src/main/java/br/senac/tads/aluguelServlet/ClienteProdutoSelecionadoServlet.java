@@ -26,10 +26,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Gustavo
- */
+
 @WebServlet(name = "ClienteProdutoSelecionadoServlet", urlPatterns = {"/aluguel/selecionar"})
 public class ClienteProdutoSelecionadoServlet extends HttpServlet {
 

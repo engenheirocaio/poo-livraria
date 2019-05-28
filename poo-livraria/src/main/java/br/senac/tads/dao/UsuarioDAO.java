@@ -10,10 +10,7 @@ import br.senac.tads.model.Usuario;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author Bruna
- */
+
 public class UsuarioDAO {
 
   public Usuario login (Usuario usuario) {

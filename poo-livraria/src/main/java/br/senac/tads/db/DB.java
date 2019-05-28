@@ -11,10 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- *
- * @author Bruna
- */
+
 public class DB {
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String SERVIDOR = "jdbc:mysql://localhost:3306/"; //Mudar apenas isso

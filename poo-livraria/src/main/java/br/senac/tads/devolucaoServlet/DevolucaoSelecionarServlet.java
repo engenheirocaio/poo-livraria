@@ -25,10 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 import static java.time.temporal.ChronoUnit.DAYS;
 import java.util.Date;
 
-/**
- *
- * @author Bruna
- */
+
 @WebServlet(name = "DevolucaoSelecionarServlet", urlPatterns = {"/devolucao/selecionar"})
 public class DevolucaoSelecionarServlet extends HttpServlet {
 

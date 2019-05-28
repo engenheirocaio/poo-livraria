@@ -5,10 +5,7 @@
  */
 package br.senac.tads.model;
 
-/**
- *
- * @author Gustavo
- */
+
 public class Cliente extends Object {
 
   private int idCliente;

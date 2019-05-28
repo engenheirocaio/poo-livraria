@@ -5,10 +5,7 @@
  */
 package br.senac.tads.model;
 
-/**
- *
- * @author caio.araujo
- */
+
 public class Administracao extends Object {
     
     private int idFilial;

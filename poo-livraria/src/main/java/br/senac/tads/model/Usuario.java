@@ -10,10 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.mindrot.jbcrypt.BCrypt;
 
-/**
- *
- * @author Bruna
- */
+
 public final class Usuario {
   
   private static String D = "Diretoria";

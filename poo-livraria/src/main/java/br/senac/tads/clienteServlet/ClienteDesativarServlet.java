@@ -11,10 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author felip
- */
+
 @WebServlet(name = "ClienteDesativarServlet", urlPatterns = {"/cliente/desativar"})
 public class ClienteDesativarServlet extends HttpServlet {
 

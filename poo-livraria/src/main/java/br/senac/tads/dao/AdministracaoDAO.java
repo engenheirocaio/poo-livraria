@@ -13,10 +13,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- *
- * @author caio.araujo
- */
+
 public class AdministracaoDAO implements CrudInterface<Administracao>  {
 
     @Override

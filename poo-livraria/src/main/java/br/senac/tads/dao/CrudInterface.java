@@ -9,11 +9,7 @@ import br.senac.tads.model.Relatorio;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- *
- * @author Bruna
- * @param <O>
- */
+
 public interface CrudInterface<O> {
   
   public ArrayList<O> listar(int idFilial);

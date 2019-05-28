@@ -5,10 +5,6 @@
  */
 package br.senac.tads.administracaoServlet;
 
-/**
- *
- * @author caio.araujo
- */
 import br.senac.tads.dao.CrudInterface;
 import br.senac.tads.dao.AdministracaoDAO;
 import br.senac.tads.model.Usuario;
@@ -20,10 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Bruna
- */
+
 @WebServlet(name = "AdministracaoDesativarServlet", urlPatterns = {"/administracao/desativar"})
 public class AdministracaoDesativarServlet extends HttpServlet {
 

@@ -7,10 +7,7 @@ package br.senac.tads.model;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-/**
- *
- * @author Bruna
- */
+
 public class Ti extends Object {
   
   private int idUsuario, idFilial, idDepartamento;

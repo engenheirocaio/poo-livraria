@@ -15,10 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.mindrot.jbcrypt.BCrypt;
 
-/**
- *
- * @author Bruna
- */
+
 @WebServlet(name = "LoginServlet", urlPatterns = {"/"})
 public class LoginServlet extends HttpServlet {
 

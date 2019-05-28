@@ -13,10 +13,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- *
- * @author Bruna
- */
+
 public class ProdutoDAO implements CrudInterface<Produto> {
 
   @Override

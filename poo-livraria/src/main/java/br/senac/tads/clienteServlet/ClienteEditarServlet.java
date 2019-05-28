@@ -12,10 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author felip
- */
+
 @WebServlet(name = "ClienteEditarServlet", urlPatterns = {"/cliente/editar"})
 public class ClienteEditarServlet extends HttpServlet {
 

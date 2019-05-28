@@ -23,10 +23,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Bruna
- */
+
 @WebServlet(name = "DevolucaoDevolverServlet", urlPatterns = {"/devolucao/devolver"})
 public class DevolucaoDevolverServlet extends HttpServlet {
 

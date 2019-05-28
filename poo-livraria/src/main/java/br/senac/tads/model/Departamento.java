@@ -1,9 +1,6 @@
 package br.senac.tads.model;
 
-/**
- *
- * @author Bruna
- */
+
 public class Departamento extends Object {
 
   private int idDepartamento;

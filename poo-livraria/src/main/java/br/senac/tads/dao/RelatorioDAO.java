@@ -13,10 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- *
- * @author mac-ale
- */
+
 public class RelatorioDAO implements CrudInterface<Relatorio> {
 
     @Override

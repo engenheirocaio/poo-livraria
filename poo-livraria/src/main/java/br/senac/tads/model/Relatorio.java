@@ -7,10 +7,7 @@ package br.senac.tads.model;
 
 import java.util.Date;
 
-/**
- *
- * @author mac-ale
- */
+
 public class Relatorio extends Object {
    private int idAluguel;
    private String nomeCliente;

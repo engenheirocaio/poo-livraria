@@ -7,10 +7,7 @@ package br.senac.tads.model;
 
 import java.util.Date;
 
-/**
- *
- * @author Gustavo
- */
+
 public class Aluguel {
 
     private int idAluguel, idProduto, idCliente, idFilial;
