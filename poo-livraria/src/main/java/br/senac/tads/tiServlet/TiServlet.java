@@ -7,10 +7,9 @@ package br.senac.tads.tiServlet;
 
 import br.senac.tads.dao.CrudInterface;
 import br.senac.tads.dao.DepartamentoDAO;
-import br.senac.tads.dao.TiDAO;
+import br.senac.tads.dao.UsuarioDAO;
 import br.senac.tads.dao.AdministracaoDAO;
 import br.senac.tads.model.Departamento;
-import br.senac.tads.model.Ti;
 import br.senac.tads.model.Usuario;
 import br.senac.tads.model.Administracao;
 import java.io.IOException;
@@ -26,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "TiServlet", urlPatterns = {"/ti"})
 public class TiServlet extends HttpServlet {
   
-private final CrudInterface tiDAO = new TiDAO();
+private final CrudInterface UsuarioDAO = new UsuarioDAO();
 private final CrudInterface departamentoDAO = new DepartamentoDAO();
 private final CrudInterface filialDAO = new AdministracaoDAO();
   
@@ -41,10 +40,10 @@ private final CrudInterface filialDAO = new AdministracaoDAO();
     }
     
     ArrayList<Departamento> departamentos = departamentoDAO.listar(u.getIdFilial());
-    ArrayList<Ti> tis = tiDAO.listar(u.getIdFilial());
+    ArrayList<Usuario> usuarios = UsuarioDAO.listar(u.getIdFilial());
     ArrayList<Administracao> filiais = filialDAO.listar(0);
  
-    request.setAttribute("tis", tis); 
+    request.setAttribute("tis", usuarios); 
     request.setAttribute("departamentos", departamentos); 
     request.setAttribute("filiais", filiais);
     request.getRequestDispatcher("/ti.jsp").forward(request, response);
@@ -60,16 +59,16 @@ private final CrudInterface filialDAO = new AdministracaoDAO();
       return;
     }
     
-    Ti t = new Ti();
+    Usuario t = new Usuario();
     
-    t.setNomeUsuario(request.getParameter("nomeUsuario"));
+    t.setNome(request.getParameter("nome"));
     t.setEmail(request.getParameter("email"));
     t.setSenha(request.getParameter("senha"));
     t.criptografarSenha();
     t.setIdDepartamento(Integer.parseInt(request.getParameter("idDepartamento")));
     t.setIdFilial(Integer.parseInt(request.getParameter("idFilial")));
     
-    boolean sucesso = tiDAO.salvar(t);
+    boolean sucesso = UsuarioDAO.salvar(t);
     request.setAttribute("sucesso", sucesso);
     
     if (sucesso) {
@@ -78,11 +77,11 @@ private final CrudInterface filialDAO = new AdministracaoDAO();
       request.setAttribute("mensagem", "Não foi possível cadastrar o Usuario. Por favor, tente novamente!");
     }
     
-    ArrayList<Departamento> departamentos = departamentoDAO.listar(u.getIdFilial());
-    ArrayList<Ti> tis = tiDAO.listar(u.getIdFilial());
+    ArrayList<Departamento> departamentos = departamentoDAO.listar(t.getIdFilial());
+    ArrayList<Usuario> usuarios = UsuarioDAO.listar(t.getIdFilial());
     ArrayList<Administracao> filiais = filialDAO.listar(0);
  
-    request.setAttribute("tis", tis); 
+    request.setAttribute("tis", usuarios); 
     request.setAttribute("departamentos", departamentos);
     request.setAttribute("filiais", filiais);
     request.getRequestDispatcher("/ti.jsp").forward(request, response);
