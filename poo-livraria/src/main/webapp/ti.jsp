@@ -47,8 +47,8 @@
             </div>
           </c:if>
           <div class="form-group">
-            <label for="nomeUsuario">*Nome:</label>
-            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" value="${ti.nome}" required="true" placeholder="Ex: Mariana da Cruz">
+            <label for="nome">*Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="${ti.nome}" required="true" placeholder="Ex: Mariana da Cruz">
           </div>
           <div class="form-group">
             <label for="email">*E-mail:</label>
