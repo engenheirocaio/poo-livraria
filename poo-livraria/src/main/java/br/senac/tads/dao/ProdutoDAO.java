@@ -7,6 +7,7 @@ package br.senac.tads.dao;
 
 import br.senac.tads.db.DB;
 import br.senac.tads.model.Produto;
+import br.senac.tads.model.Relatorio;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -222,4 +223,8 @@ public class ProdutoDAO implements CrudInterface<Produto> {
     }
   }
 
+  @Override
+  public ArrayList<Relatorio> getAluguelByDates(Date dataInicial, Date dataFinal, int idFilial) {
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  }
 }

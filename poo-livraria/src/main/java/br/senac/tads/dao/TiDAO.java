@@ -5,6 +5,7 @@
  */
 package br.senac.tads.dao;
 import br.senac.tads.db.DB;
+import br.senac.tads.model.Relatorio;
 import br.senac.tads.model.Ti;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -165,6 +166,9 @@ public class TiDAO implements CrudInterface<Ti> {
     }
   }
 
-
+  @Override
+  public ArrayList<Relatorio> getAluguelByDates(Date dataInicial, Date dataFinal, int idFilial) {
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  }
   
 }

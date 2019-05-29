@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package br.senac.tads.dao;
+
+import br.senac.tads.model.Relatorio;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -16,5 +18,5 @@ public interface CrudInterface<O> {
   public boolean salvar(O objeto);
   public boolean desativar(int ID);
 
-
+  public ArrayList<Relatorio> getAluguelByDates(Date dataInicial, Date dataFinal, int idFilial);
 }

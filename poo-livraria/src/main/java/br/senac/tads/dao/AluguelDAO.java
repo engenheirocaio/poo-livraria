@@ -9,6 +9,7 @@ import br.senac.tads.db.DB;
 import br.senac.tads.model.Aluguel;
 import br.senac.tads.model.Cliente;
 import br.senac.tads.model.Produto;
+import br.senac.tads.model.Relatorio;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
@@ -187,6 +188,11 @@ public class AluguelDAO implements CrudInterface<Aluguel> {
 
   @Override
   public ArrayList<Aluguel> listar(int idFilial) {
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  }
+
+  @Override
+  public ArrayList<Relatorio> getAluguelByDates(Date dataInicial, Date dataFinal, int idFilial) {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
 
