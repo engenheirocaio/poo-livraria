@@ -48,7 +48,7 @@
           </c:if>
           <div class="form-group">
             <label for="nomeUsuario">*Nome:</label>
-            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" value="${ti.nomeUsuario}" required="true" placeholder="Ex: Mariana da Cruz">
+            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" value="${ti.nome}" required="true" placeholder="Ex: Mariana da Cruz">
           </div>
           <div class="form-group">
             <label for="email">*E-mail:</label>
@@ -146,7 +146,7 @@
             <c:forEach items="${tis}" var="ti">
               <tr>
                 <th scope="row">${ti.idUsuario}</th>
-                <td>${ti.nomeUsuario}</td>
+                <td>${ti.nome}</td>
                 <td>${ti.email}</td>
                 <td>${ti.nomeDepartamento}</td>        
                 <td>${ti.nomeFilial}</td>

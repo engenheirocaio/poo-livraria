@@ -8,10 +8,9 @@ package br.senac.tads.tiServlet;
 import br.senac.tads.dao.AdministracaoDAO;
 import br.senac.tads.dao.CrudInterface;
 import br.senac.tads.dao.DepartamentoDAO;
-import br.senac.tads.dao.TiDAO;
+import br.senac.tads.dao.UsuarioDAO;
 import br.senac.tads.model.Administracao;
 import br.senac.tads.model.Departamento;
-import br.senac.tads.model.Ti;
 import br.senac.tads.model.Usuario;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "TiDesativarServlet", urlPatterns = {"/ti/desativar"})
 public class TiDesativarServlet extends HttpServlet {
 
-  private final CrudInterface tiDAO = new TiDAO();
+  private final CrudInterface UsuarioDAO = new UsuarioDAO();
   private final CrudInterface departamentoDAO = new DepartamentoDAO();
   private final CrudInterface filialDAO = new AdministracaoDAO();
  
@@ -42,10 +41,12 @@ public class TiDesativarServlet extends HttpServlet {
     
     String id = request.getParameter("idUsuario");
     
+    Usuario t = new Usuario();
+    
     if (id != null) {
       int idUsuario = Integer.parseInt(id);
       
-      boolean sucesso = tiDAO.desativar(idUsuario);
+      boolean sucesso = UsuarioDAO.desativar(idUsuario);
       request.setAttribute("sucesso", sucesso);
 
       if (sucesso) {
@@ -58,11 +59,11 @@ public class TiDesativarServlet extends HttpServlet {
       request.setAttribute("mensagem", "Não foi possível desativar o usuário. Por favor, tente novamente!");
     }
     
-    ArrayList<Departamento> departamentos = departamentoDAO.listar(u.getIdFilial());
-    ArrayList<Ti> tis = tiDAO.listar(u.getIdFilial());
+    ArrayList<Departamento> departamentos = departamentoDAO.listar(t.getIdFilial());
+    ArrayList<Usuario> usuarios = UsuarioDAO.listar(t.getIdFilial());
     ArrayList<Administracao> filiais = filialDAO.listar(0);
  
-    request.setAttribute("tis", tis); 
+    request.setAttribute("tis", usuarios); 
     request.setAttribute("departamentos", departamentos);
     request.setAttribute("filiais", filiais);
     request.getRequestDispatcher("/ti.jsp").forward(request, response);

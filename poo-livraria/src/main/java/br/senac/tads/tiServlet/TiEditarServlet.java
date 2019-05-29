@@ -8,10 +8,9 @@ package br.senac.tads.tiServlet;
 import br.senac.tads.dao.AdministracaoDAO;
 import br.senac.tads.dao.CrudInterface;
 import br.senac.tads.dao.DepartamentoDAO;
-import br.senac.tads.dao.TiDAO;
+import br.senac.tads.dao.UsuarioDAO;
 import br.senac.tads.model.Administracao;
 import br.senac.tads.model.Departamento;
-import br.senac.tads.model.Ti;
 import br.senac.tads.model.Usuario;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "TiEditarServlet", urlPatterns = {"/ti/editar"})
 public class TiEditarServlet extends HttpServlet {
   
-  private final CrudInterface tiDAO = new TiDAO();
+  private final CrudInterface UsuarioDAO = new UsuarioDAO();
   private final CrudInterface departamentoDAO = new DepartamentoDAO();
   private final CrudInterface filialDAO = new AdministracaoDAO();
 
@@ -43,15 +42,15 @@ public class TiEditarServlet extends HttpServlet {
     
     if (id != null) {
       int idUsuario = Integer.parseInt(id);
-      Ti ti = (Ti) tiDAO.mostrar(idUsuario);
-      request.setAttribute("ti", ti);
+      Usuario usuario = (Usuario) UsuarioDAO.mostrar(idUsuario);
+      request.setAttribute("ti", usuario);
     }
     
     ArrayList<Departamento> departamentos = departamentoDAO.listar(u.getIdFilial());
-    ArrayList<Ti> tis = tiDAO.listar(u.getIdFilial());
+    ArrayList<Usuario> usuarios = UsuarioDAO.listar(u.getIdFilial());
     ArrayList<Administracao> filiais = filialDAO.listar(0);
  
-    request.setAttribute("tis", tis); 
+    request.setAttribute("tis", usuarios); 
     request.setAttribute("departamentos", departamentos);
     request.setAttribute("filiais", filiais);
     request.getRequestDispatcher("/ti.jsp").forward(request, response);
@@ -67,10 +66,10 @@ public class TiEditarServlet extends HttpServlet {
       return;
     }
     
-    Ti t = new Ti();
+    Usuario t = new Usuario();
     
     t.setIdUsuario(Integer.parseInt(request.getParameter("idUsuario")));
-    t.setNomeUsuario(request.getParameter("nomeUsuario"));
+    t.setNome(request.getParameter("nome"));
     t.setEmail(request.getParameter("email"));
     t.setSenha(request.getParameter("senha"));
     t.setIdFilial(Integer.parseInt(request.getParameter("idFilial")));
@@ -79,7 +78,7 @@ public class TiEditarServlet extends HttpServlet {
     }
     t.setIdDepartamento(Integer.parseInt(request.getParameter("idDepartamento")));
 
-    boolean sucesso = tiDAO.editar(t);
+    boolean sucesso = UsuarioDAO.editar(t);
     request.setAttribute("sucesso", sucesso);
     
     if (sucesso) {
@@ -88,11 +87,11 @@ public class TiEditarServlet extends HttpServlet {
       request.setAttribute("mensagem", "Não foi possível editar o usuário. Por favor, tente novamente!");
     }
     
-    ArrayList<Departamento> departamentos = departamentoDAO.listar(u.getIdFilial());
-    ArrayList<Ti> tis = tiDAO.listar(u.getIdFilial());
+    ArrayList<Departamento> departamentos = departamentoDAO.listar(t.getIdFilial());
+    ArrayList<Usuario> usuarios = UsuarioDAO.listar(t.getIdFilial());
     ArrayList<Administracao> filiais = filialDAO.listar(0);
  
-    request.setAttribute("tis", tis); 
+    request.setAttribute("tis", usuarios); 
     request.setAttribute("departamentos", departamentos);
     request.setAttribute("filiais", filiais);
     request.getRequestDispatcher("/ti.jsp").forward(request, response);
