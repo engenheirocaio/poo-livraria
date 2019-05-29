@@ -9,12 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A corporate Bootstrap theme by Medium Rare">
     <link href="https://brubsduarte.github.io/assets/css/loaders/loader-typing.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="https://brubsduarte.github.io/assets/css/theme-course.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://brubsduarte.github.io/assets/css/theme-event.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="preload" as="font" href="https://brubsduarte.github.io/assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="https://brubsduarte.github.io/assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   </head>
-
+  <style>
+      .bg-primary-2 {
+        background-color: #373b44f7 !important;
+      }
+  </style>
   <body>
 
     <section class="bg-primary-2 text-light pt-4 pb-0">
