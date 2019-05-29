@@ -53,9 +53,9 @@ public class ProdutoServlet extends HttpServlet {
     
     p.setNomeProduto(request.getParameter("nomeProduto"));
     p.setAno(request.getParameter("ano"));
-    p.setModelo(request.getParameter("modelo"));
-    p.setMarca(request.getParameter("marca"));
-    p.setPlaca(request.getParameter("placa"));
+    p.setAutor(request.getParameter("autor"));
+    p.setEditora(request.getParameter("editora"));
+    p.setNumeroPagina(request.getParameter("numeroPagina"));
     p.setPrecoDiaria(Double.parseDouble(request.getParameter("precoDiaria")));
     p.setIdFilial(u.getIdFilial());
 

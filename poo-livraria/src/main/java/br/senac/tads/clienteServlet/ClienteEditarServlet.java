@@ -58,7 +58,6 @@ public class ClienteEditarServlet extends HttpServlet {
     c.setNomeCliente(request.getParameter("nomeCliente"));
     c.setCpf(request.getParameter("cpf"));
     c.setEmail(request.getParameter("email"));
-    c.setCnh(request.getParameter("cnh"));
     c.setTelefone(request.getParameter("telefone"));
     c.setCep(request.getParameter("cep"));
     c.setRua(request.getParameter("rua"));

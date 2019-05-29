@@ -12,12 +12,11 @@ public class Cliente extends Object {
   private String nomeCliente, cpf, email, cnh, telefone, cep, rua, bairro, cidade, estado;
   private boolean ativo;
 
-  public Cliente(int idCliente, String nomeCliente, String cpf, String email, String cnh, String telefone, String cep, String rua, String bairro, String cidade, String estado, boolean ativo) {
+  public Cliente(int idCliente, String nomeCliente, String cpf, String email, String telefone, String cep, String rua, String bairro, String cidade, String estado, boolean ativo) {
     this.idCliente = idCliente;
     this.nomeCliente = nomeCliente;
     this.cpf = cpf;
     this.email = email;
-    this.cnh = cnh;
     this.telefone = telefone;
     this.cep = cep;
     this.rua = rua;
@@ -32,7 +31,6 @@ public class Cliente extends Object {
     this.nomeCliente = "";
     this.cpf = "";
     this.email = "";
-    this.cnh = "";
     this.telefone = "";
     this.cep = "";
     this.rua = "";
@@ -72,14 +70,6 @@ public class Cliente extends Object {
 
   public void setEmail(String email) {
     this.email = email;
-  }
-
-  public String getCnh() {
-    return cnh;
-  }
-
-  public void setCnh(String cnh) {
-    this.cnh = cnh;
   }
 
   public String getTelefone() {

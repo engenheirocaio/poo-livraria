@@ -28,7 +28,6 @@ public class ClienteDAO implements CrudInterface<Cliente> {
                 c.setNomeCliente(rs.getString("Nome"));
                 c.setCpf(rs.getString("CPF"));
                 c.setEmail(rs.getString("Email"));
-                c.setCnh(rs.getString("CNH"));
                 c.setTelefone(rs.getString("Telefone"));
                 c.setCep(rs.getString("CEP"));
                 c.setRua(rs.getString("Rua"));
@@ -59,7 +58,6 @@ public class ClienteDAO implements CrudInterface<Cliente> {
                 c.setNomeCliente(rs.getString("Nome"));
                 c.setCpf(rs.getString("CPF"));
                 c.setEmail(rs.getString("Email"));
-                c.setCnh(rs.getString("CNH"));
                 c.setTelefone(rs.getString("Telefone"));
                 c.setCep(rs.getString("CEP"));
                 c.setRua(rs.getString("Rua"));
@@ -90,7 +88,6 @@ public class ClienteDAO implements CrudInterface<Cliente> {
                 c.setNomeCliente(rs.getString("Nome"));
                 c.setCpf(rs.getString("CPF"));
                 c.setEmail(rs.getString("Email"));
-                c.setCnh(rs.getString("CNH"));
                 c.setTelefone(rs.getString("Telefone"));
                 c.setCep(rs.getString("CEP"));
                 c.setRua(rs.getString("Rua"));
@@ -121,7 +118,6 @@ public class ClienteDAO implements CrudInterface<Cliente> {
                 c.setNomeCliente(rs.getString("Nome"));
                 c.setCpf(rs.getString("CPF"));
                 c.setEmail(rs.getString("Email"));
-                c.setCnh(rs.getString("CNH"));
                 c.setTelefone(rs.getString("Telefone"));
                 c.setCep(rs.getString("CEP"));
                 c.setRua(rs.getString("Rua"));
@@ -150,7 +146,6 @@ public class ClienteDAO implements CrudInterface<Cliente> {
                     + "Nome = '" + c.getNomeCliente() + "', "
                     + "CPF = '" + c.getCpf() + "', "
                     + "Email = '" + c.getEmail() + "', "
-                    + "CNH = '" + c.getCnh() + "', "
                     + "Telefone = '" + c.getTelefone() + "', "
                     + "CEP = '" + c.getCep() + "', "
                     + "Rua = '" + c.getRua() + "', "
@@ -185,12 +180,11 @@ public class ClienteDAO implements CrudInterface<Cliente> {
 
             String sql
                     = "INSERT INTO cliente "
-                    + "(Nome, CPF, Email, CNH, Telefone, CEP, Rua, Bairro, Cidade, Estado, Ativo)"
+                    + "(Nome, CPF, Email, Telefone, CEP, Rua, Bairro, Cidade, Estado, Ativo)"
                     + "VALUES ("
                     + "'" + c.getNomeCliente() + "', "
                     + "'" + c.getCpf() + "', "
                     + "'" + c.getEmail() + "', "
-                    + "'" + c.getCnh() + "', "
                     + "'" + c.getTelefone()+ "', "
                     + "'" + c.getCep() + "', "
                     + "'" + c.getRua() + "', "

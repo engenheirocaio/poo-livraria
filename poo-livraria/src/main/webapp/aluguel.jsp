@@ -62,7 +62,6 @@
                   <th scope="col">Nome</th>
                   <th scope="col">CPF</th>
                   <th scope="col">E-mail</th>
-                  <th scope="col">CNH</th>
                   <th scope="col">Telefone</th>
                   <th scope="col">CEP</th>
                   <th scope="col"></th>
@@ -76,7 +75,6 @@
                     <td>${cliente.nomeCliente}</td>
                     <td>${cliente.cpf}</td>
                     <td>${cliente.email}</td>
-                    <td>${cliente.cnh}</td>
                     <td>${cliente.telefone}</td>
                     <td>${cliente.cep}</td>
                     <td>
@@ -122,9 +120,9 @@
                   <th scope="col">ID</th>
                   <th scope="col">Nome</th>
                   <th scope="col">Ano</th>
-                  <th scope="col">Modelo</th>
-                  <th scope="col">Marca</th>
-                  <th scope="col">Placa</th>
+                  <th scope="col">Autor</th>
+                  <th scope="col">Editora</th>
+                  <th scope="col">Numero de pag.</th>
                   <th scope="col">Valor diária</th>
                   <th scope="col"></th>
                 </tr>
@@ -135,9 +133,9 @@
                     <th scope="row">${produto.idProduto}</th>
                     <td>${produto.nomeProduto}</td>
                     <td>${produto.ano}</td>
-                    <td>${produto.modelo}</td>
-                    <td>${produto.marca}</td>
-                    <td>${produto.placa}</td>
+                    <td>${produto.autor}</td>
+                    <td>${produto.editora}</td>
+                    <td>${produto.numeroPagina}</td>
                     <td>${produto.precoDiaria}</td>
                     <td>
                       <a href="${pageContext.request.contextPath}/aluguel/selecionar?idProduto=${produto.idProduto}&idCliente=${clienteSelecionado.idCliente}" class="m-1 btn-sm btn-primary">selecionar</a>
@@ -184,10 +182,10 @@
                   <dd class="col-sm-9">${clienteSelecionado.nomeCliente}</dd>
                   <dt class="col-sm-3"><b>CPF:</b></dt>
                   <dd class="col-sm-9">${clienteSelecionado.cpf}</dd>
-                  <dt class="col-sm-3"><b>Carro:</b></dt>
+                  <dt class="col-sm-3"><b>Livro:</b></dt>
                   <dd class="col-sm-9">${produtoSelecionado.nomeProduto}</dd>
-                  <dt class="col-sm-3"><b>Placa:</b></dt>
-                  <dd class="col-sm-9">${produtoSelecionado.placa}</dd>
+                  <dt class="col-sm-3"><b>Editora:</b></dt>
+                  <dd class="col-sm-9">${produtoSelecionado.editora}</dd>
                   <dt class="col-sm-3"><b>Valor da diária:</b></dt>
                   <dd class="col-sm-9">${produtoSelecionado.precoDiaria}</dd>
                 <dl />

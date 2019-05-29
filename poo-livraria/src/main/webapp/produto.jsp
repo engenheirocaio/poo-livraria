@@ -47,23 +47,23 @@
           </c:if>
           <div class="form-group">
             <label for="nomeProduto">*Nome:</label>
-            <input type="text" class="form-control" id="nomeProduto" name="nomeProduto" value="${produto.nomeProduto}" required="true" placeholder="Ex: HB20" onkeyup="trocaCor(this)" maxlength="20">
+            <input type="text" class="form-control" id="nomeProduto" name="nomeProduto" value="${produto.nomeProduto}" required="true" placeholder="Ex: harry potter">
           </div>
           <div class="form-group">
             <label for="ano">*Ano:</label>
             <input type="text" class="form-control" id="ano" name="ano" value="${produto.ano}" required="true" placeholder="Ex: 2019" maxlength="4">
           </div>
           <div class="form-group">
-            <label for="modelo">*Modelo:</label>
-            <input type="text" class="form-control" id="modelo" name="modelo" value="${produto.modelo}" required="true" placeholder="Ex: 2018" maxlength="4">
+            <label for="modelo">*Autor:</label>
+            <input type="text" class="form-control" id="autor" name="autor" value="${produto.autor}" required="true" placeholder="Ex: J. K. Rowling">
           </div>
           <div class="form-group">
-            <label for="marca">*Marca:</label>
-            <input type="text" class="form-control" id="marca" name="marca" value="${produto.marca}" required="true" placeholder="Ex: Hyundai" maxlength="20">
+            <label for="marca">*Editora:</label>
+            <input type="text" class="form-control" id="editora" name="editora" value="${produto.editora}" required="true" placeholder="Ex: Rocco">
           </div>
           <div class="form-group">
-            <label for="placa">*Placa:</label>
-            <input type="text" class="form-control" name="placa" id="placa" value="${produto.placa}" aria-describedby="input-group-example" required="true" placeholder="Ex: GAT0556" onkeyup="maskIt(this,event,'###-####')" maxlength="8">
+            <label for="placa">*Numero de paginas:</label>
+            <input type="number" class="form-control" name="numeroPagina" id="numeroPagina" value="${produto.numeroPagina}" aria-describedby="input-group-example" required="true" placeholder="Ex: 266">
           </div>
           <div class="form-group">
             <label for="precoDiaria">*Valor da diária:</label>
@@ -123,9 +123,9 @@
               <th scope="col">ID</th>
               <th scope="col">Nome</th>
               <th scope="col">Ano</th>
-              <th scope="col">Modelo</th>
-              <th scope="col">Marca</th>
-              <th scope="col">Placa</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Editora</th>
+              <th scope="col">Numero de Pag.</th>
               <th scope="col">Valor diária</th>
               <th scope="col"></th>
             </tr>
@@ -136,9 +136,9 @@
                 <th scope="row">${produto.idProduto}</th>
                 <td>${produto.nomeProduto}</td>
                 <td>${produto.ano}</td>
-                <td>${produto.modelo}</td>
-                <td>${produto.marca}</td>
-                <td>${produto.placa}</td>
+                <td>${produto.autor}</td>
+                <td>${produto.editora}</td>
+                <td>${produto.numeroPagina}</td>
                 <td>${produto.precoDiaria}</td>
                 <td>
                   <a href="${pageContext.request.contextPath}/produto/editar?idProduto=${produto.idProduto}" class="mr-2">
@@ -171,72 +171,6 @@
 
   </div>
 </section>
-<script language=javascript> 
-    
-function maskIt(w,e,m,r,a){
-
-// Cancela se o evento for Backspace
-
-if (!e) var e = window.event
-
-if (e.keyCode) code = e.keyCode;
-
-else if (e.which) code = e.which;
-
-
-
-// Variáveis da função
-
-var txt = (!r) ? w.value.replace(/[^\w]+/gi,'') : w.value.replace(/[^\w]+/gi,'').reverse();
-
-var mask = (!r) ? m : m.reverse();
-
-var pre = (a ) ? a.pre : "";
-
-var pos = (a ) ? a.pos : "";
-
-var ret = "";
-
-
-
-if(code == 9 || code == 8 || txt.length == mask.replace(/[^#]+/g,'').length) return false;
-
-
-
-// Loop na máscara para aplicar os caracteres
-
-for(var x=0,y=0, z=mask.length;x<z && y<txt.length;){
-
-if(mask.charAt(x)!='#'){
-
-ret += mask.charAt(x); x++;
-} else{
-
-ret += txt.charAt(y); y++; x++;
-
-}
-
-}
-
-
-
-// Retorno da função
-
-ret = (!r) ? ret : ret.reverse()
-
-w.value = pre+ret+pos;
-
-}
-
-// Novo método para o objeto 'String'
-
-String.prototype.reverse = function(){
-
-return this.split('').reverse().join('');
-
-};
-
-</script>
 
 <!-- Não mudar ABAIXO -->
 

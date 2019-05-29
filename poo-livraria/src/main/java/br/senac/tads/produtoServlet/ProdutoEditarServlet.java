@@ -62,9 +62,9 @@ public class ProdutoEditarServlet extends HttpServlet {
     p.setIdProduto(Integer.parseInt(request.getParameter("idProduto")));
     p.setNomeProduto(request.getParameter("nomeProduto"));
     p.setAno(request.getParameter("ano"));
-    p.setModelo(request.getParameter("modelo"));
-    p.setMarca(request.getParameter("marca"));
-    p.setPlaca(request.getParameter("placa"));
+    p.setAutor(request.getParameter("autor"));
+    p.setEditora(request.getParameter("editora"));
+    p.setNumeroPagina(request.getParameter("numeroPagina"));
     p.setPrecoDiaria(Double.parseDouble(request.getParameter("precoDiaria")));
 
     boolean sucesso = produtoDAO.editar(p);

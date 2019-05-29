@@ -27,9 +27,9 @@ public class ProdutoDAO implements CrudInterface<Produto> {
         p.setIdProduto(rs.getInt("idProduto"));
         p.setNomeProduto(rs.getString("NomeProduto"));
         p.setAno(rs.getString("Ano"));
-        p.setModelo(rs.getString("Modelo"));
-        p.setMarca(rs.getString("Marca"));
-        p.setPlaca(rs.getString("Placa"));
+        p.setAutor(rs.getString("Autor"));
+        p.setEditora(rs.getString("Editora"));
+        p.setNumeroPagina(rs.getString("NumeroPagina"));
         p.setPrecoDiaria(rs.getDouble("PrecoDiaria"));
         p.setAlugado(rs.getBoolean("Alugado"));
         p.setAtivo(rs.getBoolean("Ativo"));
@@ -55,9 +55,9 @@ public class ProdutoDAO implements CrudInterface<Produto> {
         p.setIdProduto(rs.getInt("idProduto"));
         p.setNomeProduto(rs.getString("NomeProduto"));
         p.setAno(rs.getString("Ano"));
-        p.setModelo(rs.getString("Modelo"));
-        p.setMarca(rs.getString("Marca"));
-        p.setPlaca(rs.getString("Placa"));
+        p.setAutor(rs.getString("Autor"));
+        p.setEditora(rs.getString("Editora"));
+        p.setNumeroPagina(rs.getString("NumeroPagina"));
         p.setPrecoDiaria(rs.getDouble("PrecoDiaria"));
         p.setAlugado(rs.getBoolean("Alugado"));
         p.setAtivo(rs.getBoolean("Ativo"));
@@ -83,9 +83,9 @@ public class ProdutoDAO implements CrudInterface<Produto> {
         p.setIdProduto(rs.getInt("idProduto"));
         p.setNomeProduto(rs.getString("NomeProduto"));
         p.setAno(rs.getString("Ano"));
-        p.setModelo(rs.getString("Modelo"));
-        p.setMarca(rs.getString("Marca"));
-        p.setPlaca(rs.getString("Placa"));
+        p.setAutor(rs.getString("Autor"));
+        p.setEditora(rs.getString("Editora"));
+        p.setNumeroPagina(rs.getString("NumeroPagina"));
         p.setPrecoDiaria(rs.getDouble("PrecoDiaria"));
         p.setAlugado(rs.getBoolean("Alugado"));
         p.setAtivo(rs.getBoolean("Ativo"));
@@ -111,9 +111,9 @@ public class ProdutoDAO implements CrudInterface<Produto> {
         p.setIdProduto(rs.getInt("idProduto"));
         p.setNomeProduto(rs.getString("NomeProduto"));
         p.setAno(rs.getString("Ano"));
-        p.setModelo(rs.getString("Modelo"));
-        p.setMarca(rs.getString("Marca"));
-        p.setPlaca(rs.getString("Placa"));
+        p.setAutor(rs.getString("Autor"));
+        p.setEditora(rs.getString("Editora"));
+        p.setNumeroPagina(rs.getString("NumeroPagina"));
         p.setPrecoDiaria(rs.getDouble("PrecoDiaria"));
         p.setAlugado(rs.getBoolean("Alugado"));
         p.setAtivo(rs.getBoolean("Ativo"));
@@ -137,9 +137,9 @@ public class ProdutoDAO implements CrudInterface<Produto> {
               = "UPDATE produto SET "
               + "NomeProduto = '" + p.getNomeProduto() + "', "
               + "Ano = '" + p.getAno() + "', "
-              + "Modelo = '" + p.getModelo() + "', "
-              + "Marca = '" + p.getMarca()+ "', "
-              + "Placa = '" + p.getPlaca() + "', "
+              + "Autor = '" + p.getAutor() + "', "
+              + "Editora = '" + p.getEditora()+ "', "
+              + "NumeroPagina = '" + p.getNumeroPagina() + "', "
               + "PrecoDiaria = " + p.getPrecoDiaria() + " "
               + "Where idProduto = " + p.getIdProduto() + "; ";
       
@@ -167,13 +167,13 @@ public class ProdutoDAO implements CrudInterface<Produto> {
 
       String sql
               = "INSERT INTO produto "
-              + "(NomeProduto, Ano, Modelo, Marca, Placa, PrecoDiaria, Alugado, idFilial, Ativo)"
+              + "(NomeProduto, Ano, Autor, Editora, NumeroPagina, PrecoDiaria, Alugado, idFilial, Ativo)"
               + "VALUES ("
               + "'" + p.getNomeProduto() + "', "
               + "'" + p.getAno() + "', "
-              + "'" + p.getModelo() + "', "
-              + "'" + p.getMarca() + "', "
-              + "'" + p.getPlaca() + "', "
+              + "'" + p.getAutor() + "', "
+              + "'" + p.getEditora() + "', "
+              + "'" + p.getNumeroPagina() + "', "
               + p.getPrecoDiaria() + ", "
               + "false, "
               + p.getIdFilial() + ", "

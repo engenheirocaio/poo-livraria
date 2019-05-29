@@ -63,7 +63,6 @@
                   <th scope="col">Nome</th>
                   <th scope="col">CPF</th>
                   <th scope="col">E-mail</th>
-                  <th scope="col">CNH</th>
                   <th scope="col">Telefone</th>
                   <th scope="col">CEP</th>
                   <th scope="col"></th>
@@ -76,7 +75,6 @@
                     <td>${cliente.nomeCliente}</td>
                     <td>${cliente.cpf}</td>
                     <td>${cliente.email}</td>
-                    <td>${cliente.cnh}</td>
                     <td>${cliente.telefone}</td>
                     <td>${cliente.cep}</td>
                     <td>
@@ -123,10 +121,10 @@
                   <dd class="col-sm-9">${clienteSelecionado.nomeCliente}</dd>
                   <dt class="col-sm-3"><b>CPF:</b></dt>
                   <dd class="col-sm-9">${clienteSelecionado.cpf}</dd>
-                  <dt class="col-sm-3"><b>Carro:</b></dt>
+                  <dt class="col-sm-3"><b>Livro:</b></dt>
                   <dd class="col-sm-9">${produtoSelecionado.nomeProduto}</dd>
-                  <dt class="col-sm-3"><b>Placa:</b></dt>
-                  <dd class="col-sm-9">${produtoSelecionado.placa}</dd>
+                  <dt class="col-sm-3"><b>Editora:</b></dt>
+                  <dd class="col-sm-9">${produtoSelecionado.editora}</dd>
                   <dt class="col-sm-3"><b>Valor da diária:</b></dt>
                   <dd class="col-sm-9">${produtoSelecionado.precoDiaria}</dd>
                 <dl />

@@ -32,9 +32,9 @@ public class AluguelDAO implements CrudInterface<Aluguel> {
         p.setIdProduto(rs.getInt("idProduto"));
         p.setNomeProduto(rs.getString("NomeProduto"));
         p.setAno(rs.getString("Ano"));
-        p.setModelo(rs.getString("Modelo"));
-        p.setMarca(rs.getString("Marca"));
-        p.setPlaca(rs.getString("Placa"));
+        p.setAutor(rs.getString("Autor"));
+        p.setEditora(rs.getString("Editora"));
+        p.setNumeroPagina(rs.getString("NumeroPagina"));
         p.setPrecoDiaria(rs.getDouble("PrecoDiaria"));
         p.setAlugado(rs.getBoolean("Alugado"));
         p.setAtivo(rs.getBoolean("Ativo"));
@@ -43,7 +43,6 @@ public class AluguelDAO implements CrudInterface<Aluguel> {
         c.setNomeCliente(rs.getString("Nome"));
         c.setCpf(rs.getString("CPF"));
         c.setEmail(rs.getString("Email"));
-        c.setCnh(rs.getString("CNH"));
         c.setTelefone(rs.getString("Telefone"));
         c.setCep(rs.getString("CEP"));
         c.setRua(rs.getString("Rua"));

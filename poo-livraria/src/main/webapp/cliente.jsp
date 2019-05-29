@@ -58,10 +58,6 @@
             <input type="text" class="form-control" id="email" name="email" value="${cliente.email}" required="email" placeholder="Ex: paola.bracho@gmail.com">
           </div>
           <div class="form-group">
-            <label for="cnh">*CNH:</label>
-            <input type="text" class="form-control" id="cnh" name="cnh" value="${cliente.cnh}" required="true" placeholder="Ex: 00123456789" maxlength="11">
-          </div>
-          <div class="form-group">
             <label for="telefone">*Telefone:</label>
             <input type="text" class="form-control" name="telefone" id="telefone" value="${cliente.telefone}" aria-describedby="input-group-example" required="true" placeholder="Ex: (99) 6000-9005" onkeyup="maskIt(this,event,'(##)####-####')">
           </div>
@@ -139,7 +135,6 @@
               <th scope="col">Nome</th>
               <th scope="col">CPF</th>
               <th scope="col">E-mail</th>
-              <th scope="col">CNH</th>
               <th scope="col">Telefone</th>
               <th scope="col">CEP</th>
               <th scope="col"></th>
@@ -152,7 +147,6 @@
                 <td style="white-space: nowrap;">${cliente.nomeCliente}</td>
                 <td style="white-space: nowrap;">${cliente.cpf}</td>
                 <td style="white-space: nowrap;">${cliente.email}</td>
-                <td style="white-space: nowrap;">${cliente.cnh}</td>
                 <td style="white-space: nowrap;">${cliente.telefone}</td>
                 <td style="white-space: nowrap;">${cliente.cep}</td>
                 <td style="white-space: nowrap;">
