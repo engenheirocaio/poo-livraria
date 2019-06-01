@@ -32,18 +32,18 @@
             </div>
         </c:if>
         
-        <c:if test="${ti.idUsuario == null}">
+        <c:if test="${ti.id == null}">
           <c:url value="/ti" var="registerUrl" />
         </c:if>
-        <c:if test="${ti.idUsuario != null}">
+        <c:if test="${ti.id != null}">
           <c:url value="/ti/editar" var="registerUrl" />
         </c:if>
         
         <form action="${registerUrl}" method="post">
-          <c:if test="${ti.idUsuario ne null}">
+          <c:if test="${ti.id ne null}">
             <div class="form-group">
               <label for="idUsuario">ID:</label>
-              <input type="text" class="form-control" id="idUsuario" name="idUsuario" value="${ti.idUsuario}" placeholder="0000" readonly>
+              <input type="text" class="form-control" id="idUsuario" name="idUsuario" value="${ti.id}" placeholder="0000" readonly>
             </div>
           </c:if>
           <div class="form-group">
@@ -84,12 +84,12 @@
               <path d="M14.4444 8.41358C14.7776 8.2281 15.1875 8.46907 15.1875 8.85048V15.1495C15.1875 15.5309 14.7776 15.7719 14.4444 15.5864L8.78505 12.4369C8.44258 12.2463 8.44258 11.7537 8.78505 11.5631L14.4444 8.41358Z" fill="#212529"></path>
             </svg>
           </div>
-          <c:if test="${ti.idUsuario ne null}">
+          <c:if test="${ti.id ne null}">
             <div class="form-group mt-5">
               <button class="btn-block btn btn-primary-2" value="Update" type="submit">Editar</button>
             </div>
           </c:if>
-          <c:if test="${ti.idUsuario eq null}">
+          <c:if test="${ti.id eq null}">
             <div class="form-group mt-5">
               <button class="btn-block btn btn-primary" value="Save" type="submit">Salvar</button>
             </div>
@@ -145,13 +145,13 @@
           <tbody id="tb-lista">
             <c:forEach items="${tis}" var="ti">
               <tr>
-                <th scope="row">${ti.idUsuario}</th>
+                <th scope="row">${ti.id}</th>
                 <td>${ti.nome}</td>
                 <td>${ti.email}</td>
                 <td>${ti.nomeDepartamento}</td>        
                 <td>${ti.nomeFilial}</td>
                 <td>
-                  <a href="${pageContext.request.contextPath}/ti/editar?idUsuario=${ti.idUsuario}" class="mr-2">
+                  <a href="${pageContext.request.contextPath}/ti/editar?idUsuario=${ti.id}" class="mr-2">
                     <svg class="icon bg-primary" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <title>Icon For Edit</title>
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -161,7 +161,7 @@
                       </g>
                     </svg>
                   </a>
-                  <a href="${pageContext.request.contextPath}/ti/desativar?idUsuario=${ti.idUsuario}" onclick="return confirm('Tem certeza que deseja desativar este usuário?');" class="">
+                  <a href="${pageContext.request.contextPath}/ti/desativar?idUsuario=${ti.id}" onclick="return confirm('Tem certeza que deseja desativar este usuário?');" class="">
                     <svg class="icon bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <title>Icon For Trash</title>
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

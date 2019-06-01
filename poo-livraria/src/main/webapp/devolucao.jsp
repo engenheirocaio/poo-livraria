@@ -71,14 +71,14 @@
               <tbody id="tb-lista">
                 <c:forEach items="${clientes}" var="cliente">
                   <tr>
-                    <th scope="row">${cliente.idCliente}</th>
-                    <td>${cliente.nomeCliente}</td>
+                    <th scope="row">${cliente.id}</th>
+                    <td>${cliente.nome}</td>
                     <td>${cliente.cpf}</td>
                     <td>${cliente.email}</td>
                     <td>${cliente.telefone}</td>
                     <td>${cliente.cep}</td>
                     <td>
-                      <a href="${pageContext.request.contextPath}/devolucao/selecionar?idCliente=${cliente.idCliente}" class="m-1 btn-sm btn-primary">selecionar</a>
+                      <a href="${pageContext.request.contextPath}/devolucao/selecionar?idCliente=${cliente.id}" class="m-1 btn-sm btn-primary">selecionar</a>
                     </td>
                   </tr>
                 </c:forEach>
@@ -109,7 +109,7 @@
               <input name="idAluguel" value="${aluguel.idAluguel}" type="hidden">
               <input name="idProdutoSelecionado" value="${produtoSelecionado.idProduto}" type="hidden">
               <input name="precoDiaria" value="${produtoSelecionado.precoDiaria}" type="hidden">
-              <input name="idClienteSelecionado" value="${clienteSelecionado.idCliente}" type="hidden">
+              <input name="idClienteSelecionado" value="${clienteSelecionado.id}" type="hidden">
             </div>
           </div>
             
@@ -118,7 +118,7 @@
               <ul class="list-unstyled">
                 <dl class="row">
                   <dt class="col-sm-3"><b>Nome:</b></dt>
-                  <dd class="col-sm-9">${clienteSelecionado.nomeCliente}</dd>
+                  <dd class="col-sm-9">${clienteSelecionado.nome}</dd>
                   <dt class="col-sm-3"><b>CPF:</b></dt>
                   <dd class="col-sm-9">${clienteSelecionado.cpf}</dd>
                   <dt class="col-sm-3"><b>Livro:</b></dt>
@@ -155,7 +155,7 @@
           
           <input name="dataRetirada" value="${dataRetirada}" type="hidden">
           <input name="dateDevolucao" value="${dateDevolucao}" type="hidden">
-          <input name="idClienteSelecionado" value="${clienteSelecionado.idCliente}" type="hidden">
+          <input name="idClienteSelecionado" value="${clienteSelecionado.id}" type="hidden">
           <input name="precoDiaria" value="${produtoSelecionado.precoDiaria}" type="hidden">
           
           <div>

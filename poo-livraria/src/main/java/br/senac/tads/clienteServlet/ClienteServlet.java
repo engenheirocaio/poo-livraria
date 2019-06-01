@@ -51,7 +51,7 @@ public class ClienteServlet extends HttpServlet {
     
     Cliente c = new Cliente();
     
-    c.setNomeCliente(request.getParameter("nomeCliente"));
+    c.setNome(request.getParameter("nomeCliente"));
     c.setCpf(request.getParameter("cpf"));
     c.setEmail(request.getParameter("email"));
     c.setTelefone(request.getParameter("telefone"));

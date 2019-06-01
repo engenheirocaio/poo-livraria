@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import org.mindrot.jbcrypt.BCrypt;
 
 
-public final class Usuario {
+public final class Usuario extends Pessoa{
   
   private static String D = "Diretoria";
   private static String GGR = "Gerencia global retaguarda";
@@ -37,34 +37,31 @@ public final class Usuario {
   private boolean acessaAdministracao = false;
   private boolean isGlobal = false;
   
-  private int idUsuario, idDepartamento, idFilial;
-  private String nome, email, senha, nomeFilial, nomeDepartamento;
-  private boolean ativo;
+  private int  idDepartamento, idFilial;
+  private String  senha, nomeFilial, nomeDepartamento;
 
   public Usuario() {
     iniciaVazio();
   }
   
   private void iniciaVazio() {
-    this.idUsuario = 0;
+
     this.idDepartamento = 0;
     this.idFilial = 0;
-    this.nome = "";
-    this.email = "";
+
     this.senha = "";
-    this.ativo = true;
+
     this.nomeFilial = "";
     this.nomeDepartamento = "";
   }
  
-  public Usuario(int idUsuario, int idDepartamento, int idFilial, String nome, String email, String senha, boolean ativo, String nomeFilial, String nomeDepartamento) {
-    this.idUsuario = idUsuario;
+  public Usuario(int idDepartamento, int idFilial, String senha, String nomeFilial, String nomeDepartamento) {
+
     this.idDepartamento = idDepartamento;
     this.idFilial = idFilial;
-    this.nome = nome;
-    this.email = email;
+
     this.senha = senha;
-    this.ativo = ativo;
+
     this.nomeFilial = nomeFilial;
     this.nomeDepartamento = nomeDepartamento;
     
@@ -79,7 +76,7 @@ public final class Usuario {
     
     HttpSession sessao = request.getSession();
     
-    sessao.setAttribute("usuario.idUsuario", this.idUsuario);
+    sessao.setAttribute("usuario.id", this.id);
     sessao.setAttribute("usuario.idDepartamento", this.idDepartamento);
     sessao.setAttribute("usuario.idFilial", this.idFilial);
     sessao.setAttribute("usuario.nome", this.nome);
@@ -94,11 +91,11 @@ public final class Usuario {
     
     HttpSession sessao = request.getSession();
     
-    if (sessao.getAttribute("usuario.idUsuario") == "" || sessao.getAttribute("usuario.idUsuario") == null) {
+    if (sessao.getAttribute("usuario.id") == "" || sessao.getAttribute("usuario.id") == null) {
       return;
     }
     
-    this.idUsuario = (int) sessao.getAttribute("usuario.idUsuario");
+    this.id = (int) sessao.getAttribute("usuario.id");
     this.idDepartamento = (int) sessao.getAttribute("usuario.idDepartamento");
     this.idFilial = (int) sessao.getAttribute("usuario.idFilial");
     this.nome = (String) sessao.getAttribute("usuario.nome");
@@ -146,13 +143,6 @@ public final class Usuario {
     this.senha = BCrypt.hashpw(this.senha, BCrypt.gensalt());
   }
   
-  public int getIdUsuario() {
-    return idUsuario;
-  }
-
-  public void setIdUsuario(int idUsuario) {
-    this.idUsuario = idUsuario;
-  }
 
   public int getIdDepartamento() {
     return idDepartamento;
@@ -170,21 +160,6 @@ public final class Usuario {
     this.idFilial = idFilial;
   }
 
-  public String getNome() {
-    return nome;
-  }
-
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
 
   public String getSenha() {
     return senha;
@@ -194,13 +169,6 @@ public final class Usuario {
     this.senha = senha;
   }
 
-  public boolean isAtivo() {
-    return ativo;
-  }
-
-  public void setAtivo(boolean ativo) {
-    this.ativo = ativo;
-  }
   
   public String getNomeFilial() {
     return nomeFilial;

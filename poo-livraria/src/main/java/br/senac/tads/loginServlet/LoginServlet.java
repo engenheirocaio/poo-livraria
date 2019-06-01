@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
 
     Usuario u = new Usuario(request);
     
-    if(u.getIdUsuario() != 0) {
+    if(u.getId() != 0) {
       response.sendRedirect(request.getContextPath() + "/bemvindo");
       return;
     }
@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
     
     usuario = usuarioDAO.login(usuario);
     
-    if (usuario.getIdUsuario() != 0){
+    if (usuario.getId() != 0){
       
       if (BCrypt.checkpw(senhaAberta, usuario.getSenha())) {
         usuario.setSession(request);

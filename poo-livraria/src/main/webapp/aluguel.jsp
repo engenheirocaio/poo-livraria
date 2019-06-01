@@ -71,14 +71,14 @@
                 <c:forEach items="${clientes}" var="cliente">
                   <tr>
                     <tr>
-                    <th scope="row">${cliente.idCliente}</th>
-                    <td>${cliente.nomeCliente}</td>
+                    <th scope="row">${cliente.id}</th>
+                    <td>${cliente.nome}</td>
                     <td>${cliente.cpf}</td>
                     <td>${cliente.email}</td>
                     <td>${cliente.telefone}</td>
                     <td>${cliente.cep}</td>
                     <td>
-                      <a href="${pageContext.request.contextPath}/aluguel/selecionar?idCliente=${cliente.idCliente}&idProduto=${produtoSelecionado.idProduto}" class="m-1 btn-sm btn-primary">selecionar</a>
+                      <a href="${pageContext.request.contextPath}/aluguel/selecionar?idCliente=${cliente.id}&idProduto=${produtoSelecionado.idProduto}" class="m-1 btn-sm btn-primary">selecionar</a>
                     </td>
                   </tr>
                 </c:forEach>
@@ -138,7 +138,7 @@
                     <td>${produto.numeroPagina}</td>
                     <td>${produto.precoDiaria}</td>
                     <td>
-                      <a href="${pageContext.request.contextPath}/aluguel/selecionar?idProduto=${produto.idProduto}&idCliente=${clienteSelecionado.idCliente}" class="m-1 btn-sm btn-primary">selecionar</a>
+                      <a href="${pageContext.request.contextPath}/aluguel/selecionar?idProduto=${produto.idProduto}&idCliente=${clienteSelecionado.id}" class="m-1 btn-sm btn-primary">selecionar</a>
                     </td>
                   </tr>
                 </c:forEach>
@@ -171,7 +171,7 @@
               <label class="control-label" for="dateRetirada">Data de retirada</label>
               <input class="form-control" id="dateRetirada" name="dateRetirada" value="${hoje}" placeholder="dd/mm/yyyy" type="text" readonly>
               <input name="idProdutoSelecionado" value="${produtoSelecionado.idProduto}" type="hidden">
-              <input name="idClienteSelecionado" value="${clienteSelecionado.idCliente}" type="hidden">
+              <input name="idClienteSelecionado" value="${clienteSelecionado.id}" type="hidden">
             </div>
           </div>
           <div class="card">
@@ -179,7 +179,7 @@
               <ul class="list-unstyled">
                 <dl class="row">
                   <dt class="col-sm-3"><b>Nome:</b></dt>
-                  <dd class="col-sm-9">${clienteSelecionado.nomeCliente}</dd>
+                  <dd class="col-sm-9">${clienteSelecionado.nome}</dd>
                   <dt class="col-sm-3"><b>CPF:</b></dt>
                   <dd class="col-sm-9">${clienteSelecionado.cpf}</dd>
                   <dt class="col-sm-3"><b>Livro:</b></dt>

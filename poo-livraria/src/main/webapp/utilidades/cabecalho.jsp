@@ -18,6 +18,54 @@
       .bg-primary-2 {
         background-color: #373b44f7 !important;
       }
+      
+      .nav-link.btn-light .icon * {
+        fill: #0089ff;
+      }
+      
+      .form-group label {
+        color: #000000;
+      }
+      
+      .form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.375rem + 2px);
+    padding: 0.4375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #212529;
+    border-radius: 0.3125rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    
+    .input-group{
+        color: #495057;
+    }
+    
+    .input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.4375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #ffffff00;
+    border: 1px solid #020122;
+    border-radius: 0.3125rem;
+}
+
+.bg-primary-alt {
+    background: #02012226;
+}
   </style>
   <body>
 

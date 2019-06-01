@@ -24,8 +24,8 @@ public class ClienteDAO implements CrudInterface<Cliente> {
             ArrayList<Cliente> clientes = new ArrayList();
             while (rs.next()) {
                 Cliente c = new Cliente();
-                c.setIdCliente(rs.getInt("idCliente"));
-                c.setNomeCliente(rs.getString("Nome"));
+                c.setId(rs.getInt("idCliente"));
+                c.setNome(rs.getString("Nome"));
                 c.setCpf(rs.getString("CPF"));
                 c.setEmail(rs.getString("Email"));
                 c.setTelefone(rs.getString("Telefone"));
@@ -54,8 +54,8 @@ public class ClienteDAO implements CrudInterface<Cliente> {
             ArrayList<Cliente> clientes = new ArrayList();
             while (rs.next()) {
                 Cliente c = new Cliente();
-                c.setIdCliente(rs.getInt("idCliente"));
-                c.setNomeCliente(rs.getString("Nome"));
+                c.setId(rs.getInt("idCliente"));
+                c.setNome(rs.getString("Nome"));
                 c.setCpf(rs.getString("CPF"));
                 c.setEmail(rs.getString("Email"));
                 c.setTelefone(rs.getString("Telefone"));
@@ -84,8 +84,8 @@ public class ClienteDAO implements CrudInterface<Cliente> {
             ArrayList<Cliente> clientes = new ArrayList();
             while (rs.next()) {
                 Cliente c = new Cliente();
-                c.setIdCliente(rs.getInt("idCliente"));
-                c.setNomeCliente(rs.getString("Nome"));
+                c.setId(rs.getInt("idCliente"));
+                c.setNome(rs.getString("Nome"));
                 c.setCpf(rs.getString("CPF"));
                 c.setEmail(rs.getString("Email"));
                 c.setTelefone(rs.getString("Telefone"));
@@ -114,8 +114,8 @@ public class ClienteDAO implements CrudInterface<Cliente> {
             ResultSet rs = db.executarConsulta(sql);
             Cliente c = new Cliente();
             while (rs.next()) {
-                c.setIdCliente(rs.getInt("idCliente"));
-                c.setNomeCliente(rs.getString("Nome"));
+                c.setId(rs.getInt("idCliente"));
+                c.setNome(rs.getString("Nome"));
                 c.setCpf(rs.getString("CPF"));
                 c.setEmail(rs.getString("Email"));
                 c.setTelefone(rs.getString("Telefone"));
@@ -143,7 +143,7 @@ public class ClienteDAO implements CrudInterface<Cliente> {
 
             String sql
                     = "UPDATE cliente SET "
-                    + "Nome = '" + c.getNomeCliente() + "', "
+                    + "Nome = '" + c.getNome() + "', "
                     + "CPF = '" + c.getCpf() + "', "
                     + "Email = '" + c.getEmail() + "', "
                     + "Telefone = '" + c.getTelefone() + "', "
@@ -152,7 +152,7 @@ public class ClienteDAO implements CrudInterface<Cliente> {
                     + "Bairro = '" + c.getBairro() + "', "
                     + "Cidade = '" + c.getCidade() + "', "
                     + "Estado = '" + c.getEstado() + "' "
-                    + "Where idCliente = " + c.getIdCliente() + "; ";
+                    + "Where idCliente = " + c.getId() + "; ";
 
             System.out.println(sql);
             
@@ -182,7 +182,7 @@ public class ClienteDAO implements CrudInterface<Cliente> {
                     = "INSERT INTO cliente "
                     + "(Nome, CPF, Email, Telefone, CEP, Rua, Bairro, Cidade, Estado, Ativo)"
                     + "VALUES ("
-                    + "'" + c.getNomeCliente() + "', "
+                    + "'" + c.getNome() + "', "
                     + "'" + c.getCpf() + "', "
                     + "'" + c.getEmail() + "', "
                     + "'" + c.getTelefone()+ "', "

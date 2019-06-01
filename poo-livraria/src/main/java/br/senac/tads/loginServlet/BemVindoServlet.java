@@ -23,10 +23,10 @@ public class BemVindoServlet extends HttpServlet {
     Usuario u = new Usuario(request);
     
     System.out.println("");
-    System.out.println(u.getIdUsuario() + " " + u.getNomeDepartamento());
+    System.out.println(u.getId() + " " + u.getNomeDepartamento());
     System.out.println("");
     
-    if(u.getIdUsuario() == 0) {
+    if(u.getId() == 0) {
       response.sendRedirect(request.getContextPath() + "/");
       return;
     }

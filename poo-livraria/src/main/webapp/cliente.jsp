@@ -31,23 +31,23 @@
             </div>
         </c:if>
         
-        <c:if test="${cliente.idCliente == null}">
+        <c:if test="${cliente.id == null}">
           <c:url value="/cliente" var="registerUrl" />
         </c:if>
-        <c:if test="${cliente.idCliente != null}">
+        <c:if test="${cliente.id != null}">
           <c:url value="/cliente/editar" var="registerUrl" />
         </c:if>
         
         <form action="${registerUrl}" method="post">
-          <c:if test="${cliente.idCliente ne null}">
+          <c:if test="${cliente.id ne null}">
             <div class="form-group">
               <label for="idCliente">ID:</label>
-              <input type="text" class="form-control" id="idCliente" name="idCliente" value="${cliente.idCliente}" placeholder="0000" readonly>
+              <input type="text" class="form-control" id="idCliente" name="idCliente" value="${cliente.id}" placeholder="0000" readonly>
             </div>
           </c:if>
           <div class="form-group">
             <label for="nomeCliente">*Nome:</label>
-            <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" value="${cliente.nomeCliente}" required="true" placeholder="Ex: Paola Bracho" maxlength="50">
+            <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" value="${cliente.nome}" required="true" placeholder="Ex: Paola Bracho" maxlength="50">
           </div>
           <div class="form-group">
             <label for="cpf">*CPF:</label>
@@ -82,12 +82,12 @@
             <input type="text" class="form-control" name="estado" id="estado" value="${cliente.estado}" aria-describedby="input-group-example" required="true" placeholder="Ex: SP" maxlength="2">
           </div>
           
-          <c:if test="${cliente.idCliente ne null}">
+          <c:if test="${cliente.id ne null}">
             <div class="form-group mt-5">
               <button class="btn-block btn btn-primary-2" value="Update" type="submit">Editar</button>
             </div>
           </c:if>
-          <c:if test="${cliente.idCliente eq null}">
+          <c:if test="${cliente.id eq null}">
             <div class="form-group mt-5">
               <button class="btn-block btn btn-primary" value="Save" type="submit">Salvar</button>
             </div>
@@ -143,14 +143,14 @@
           <tbody id="tb-lista">
             <c:forEach items="${clientes}" var="cliente">
               <tr>
-                <td scope="row" style="white-space: nowrap;">${cliente.idCliente}</td>
-                <td style="white-space: nowrap;">${cliente.nomeCliente}</td>
+                <td scope="row" style="white-space: nowrap;">${cliente.id}</td>
+                <td style="white-space: nowrap;">${cliente.nome}</td>
                 <td style="white-space: nowrap;">${cliente.cpf}</td>
                 <td style="white-space: nowrap;">${cliente.email}</td>
                 <td style="white-space: nowrap;">${cliente.telefone}</td>
                 <td style="white-space: nowrap;">${cliente.cep}</td>
                 <td style="white-space: nowrap;">
-                  <a href="${pageContext.request.contextPath}/cliente/editar?idCliente=${cliente.idCliente}" class="mr-2">
+                  <a href="${pageContext.request.contextPath}/cliente/editar?idCliente=${cliente.id}" class="mr-2">
                     <svg class="icon bg-primary" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <title>Icon For Edit</title>
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -160,7 +160,7 @@
                       </g>
                     </svg>
                   </a>
-                  <a href="${pageContext.request.contextPath}/cliente/desativar?idCliente=${cliente.idCliente}" onclick="return confirm('Tem certeza que deseja desativar este cliente?');" class="">
+                  <a href="${pageContext.request.contextPath}/cliente/desativar?idCliente=${cliente.id}" onclick="return confirm('Tem certeza que deseja desativar este cliente?');" class="">
                     <svg class="icon bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <title>Icon For Trash</title>
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

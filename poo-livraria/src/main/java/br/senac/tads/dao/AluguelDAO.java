@@ -39,8 +39,8 @@ public class AluguelDAO implements CrudInterface<Aluguel> {
         p.setAlugado(rs.getBoolean("Alugado"));
         p.setAtivo(rs.getBoolean("Ativo"));
         
-        c.setIdCliente(rs.getInt("idCliente"));
-        c.setNomeCliente(rs.getString("Nome"));
+        c.setId(rs.getInt("idCliente"));
+        c.setNome(rs.getString("Nome"));
         c.setCpf(rs.getString("CPF"));
         c.setEmail(rs.getString("Email"));
         c.setTelefone(rs.getString("Telefone"));

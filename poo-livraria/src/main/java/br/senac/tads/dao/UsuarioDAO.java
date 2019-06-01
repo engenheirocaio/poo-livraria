@@ -26,7 +26,7 @@ public class UsuarioDAO implements CrudInterface<Usuario>{
       ArrayList<Usuario> usuarios = new ArrayList<>();
       while (rs.next()) {
         Usuario u = new Usuario();
-        u.setIdUsuario(rs.getInt("idUsuario"));
+        u.setId(rs.getInt("idUsuario"));
         u.setNome(rs.getString("NomeUsuario"));
         u.setEmail(rs.getString("Email"));
         u.setSenha(rs.getString("Senha")); 
@@ -53,7 +53,7 @@ public class UsuarioDAO implements CrudInterface<Usuario>{
       ResultSet rs = db.executarConsulta(sql);
       Usuario u = new Usuario();
       while (rs.next()) {
-        u.setIdUsuario(rs.getInt("idUsuario"));
+        u.setId(rs.getInt("idUsuario"));
         u.setNome(rs.getString("NomeUsuario"));
         u.setEmail(rs.getString("Email"));
         u.setIdDepartamento(rs.getInt("idDepartamento"));
@@ -86,7 +86,7 @@ public class UsuarioDAO implements CrudInterface<Usuario>{
               sql = sql 
                       + "IdDepartamento= " + u.getIdDepartamento() + ", "
                       + "idFilial= " + u.getIdFilial()+ " "
-              + "Where idUsuario = " + u.getIdUsuario() + ";";
+              + "Where idUsuario = " + u.getId() + ";";
       
       if (!db.executarAlteracao(sql)) {
         throw new Exception("Não foi possivel atualizar os dados de usuário.");
@@ -181,7 +181,7 @@ public class UsuarioDAO implements CrudInterface<Usuario>{
       
       while (rs.next()) {
         usuario = new Usuario();
-        usuario.setIdUsuario(rs.getInt("idUsuario"));
+        usuario.setId(rs.getInt("idUsuario"));
         usuario.setNome(rs.getString("NomeUsuario"));
         usuario.setEmail(rs.getString("Email"));
         usuario.setSenha(rs.getString("Senha"));

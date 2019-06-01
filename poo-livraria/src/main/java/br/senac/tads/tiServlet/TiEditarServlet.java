@@ -68,7 +68,7 @@ public class TiEditarServlet extends HttpServlet {
     
     Usuario t = new Usuario();
     
-    t.setIdUsuario(Integer.parseInt(request.getParameter("idUsuario")));
+    t.setId(Integer.parseInt(request.getParameter("idUsuario")));
     t.setNome(request.getParameter("nome"));
     t.setEmail(request.getParameter("email"));
     t.setSenha(request.getParameter("senha"));
