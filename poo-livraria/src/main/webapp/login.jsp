@@ -58,7 +58,7 @@
         
         <div class="row justify-content-center pt-5">
           <div class="col col-md-auto text-center">
-            <p class="text-muted">&copy;2019 TADES Ltda. Um sistema desenvolvido pela equipe The Avengers.</p>
+            <p class="text-muted">&copy;2019 TADES Ltda. Um sistema desenvolvido por alunos do Senac</p>
           </div>
         </div>
       </div>
