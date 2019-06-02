@@ -25,7 +25,7 @@
       <div class="container layer-2">
         <div class="row justify-content-center pt-lg-5 mb-5">
           <div class="col-xl-5 col-lg-6 col-md-7 text-center mb-5 mb-lg-0">
-            <img src="https://brubsduarte.github.io/assets/img/logo.png" style="height: auto; width: 100%;" class="mb-">
+            <img src="https://i.pinimg.com/originals/b5/e7/4b/b5e74b9f1f3b2322ce3bfa7d84e854c4.png" style="height: auto; width: 100%;" class="mb-">
           </div>
           <div class="col">
             <div class="row justify-content-center">

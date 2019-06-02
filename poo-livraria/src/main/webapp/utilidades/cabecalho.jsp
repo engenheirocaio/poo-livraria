@@ -78,7 +78,7 @@
           </div>
           <div class="col-4 text-center">
             <a href="${pageContext.request.contextPath}/bemvindo">
-              <img src="https://brubsduarte.github.io/assets/img/logo.png" style="height: 150px; width: auto;" class="mb-">
+              <img src="https://i.pinimg.com/originals/b5/e7/4b/b5e74b9f1f3b2322ce3bfa7d84e854c4.png" style="height: 150px; width: auto;" class="mb-">
             </a>
           </div>
           <div class="col-4">
