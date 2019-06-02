@@ -14,7 +14,7 @@
     <!-- Formuário de cadastro -->
     <div class="row justify-content-center">
       <div class="col">
-        <h1 class="text-center">Aluguel de veículos</h1>
+        <h1 class="text-center">Aluguel de Livros</h1>
         
         <!-- Pesqusia de clientes -->
         <c:if test="${sucesso != null}">
@@ -88,7 +88,7 @@
         </div>
         
         
-        <!-- Pesquisa de veículos -->
+      
         
         <!-- Formuário de pesquisa -->
         <div class="row justify-content-center mb-3">
@@ -106,7 +106,7 @@
                   </svg>
                 </span>
               </div>
-              <input type="search" class="form-control form-control-lg" placeholder="Pesquise o veículo" id="pesquisa-input-2" >
+              <input type="search" class="form-control form-control-lg" placeholder="Pesquise o Livro" id="pesquisa-input-2" >
             </div>
           </div>
         </div>

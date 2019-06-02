@@ -15,7 +15,7 @@
     <!-- Formuário de cadastro -->
     <div class="row justify-content-center">
       <div class="col">
-        <h1 class="text-center">Devolução de veículos</h1>
+        <h1 class="text-center">Devolução de Livros</h1>
         
         <!-- Pesqusia de clientes -->
         <c:if test="${sucesso != null}">
@@ -160,7 +160,7 @@
           
           <div>
             <a class="btn btn-primary-2 mr-2" href="${pageContext.request.contextPath}/devolucao">Cancelar</a>
-            <button class="btn btn-primary" value="Save" type="submit">Devolver veículo</button>
+            <button class="btn btn-primary" value="Save" type="submit">Devolver Livro</button>
           </div>
         </form>
       </div>
