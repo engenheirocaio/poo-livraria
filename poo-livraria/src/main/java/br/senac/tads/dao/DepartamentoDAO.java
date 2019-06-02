@@ -10,8 +10,6 @@ import br.senac.tads.model.Departamento;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
-
 
 public class DepartamentoDAO implements CrudInterface<Departamento> {
 

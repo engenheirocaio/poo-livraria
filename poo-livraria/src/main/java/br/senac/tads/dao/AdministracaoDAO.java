@@ -10,8 +10,6 @@ import br.senac.tads.model.Administracao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
-
 
 public class AdministracaoDAO implements CrudInterface<Administracao>  {
 

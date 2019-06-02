@@ -10,8 +10,6 @@ import br.senac.tads.model.Cliente;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
-
 
 public class ClienteDAO implements CrudInterface<Cliente> {
 

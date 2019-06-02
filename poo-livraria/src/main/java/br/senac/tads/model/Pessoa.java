@@ -11,11 +11,8 @@ package br.senac.tads.model;
  */
 public class Pessoa {
     public int id;
-    public String nome;
-    public String email;
+    public String nome, email;
     public boolean ativo;
-
-    
     
     public Pessoa(int id, String nome, String email, boolean ativo) {
     this.id = id;

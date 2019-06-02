@@ -8,8 +8,7 @@ package br.senac.tads.model;
 
 public class Cliente extends Pessoa{
 
-  //private int id;
-  private String cpf, cnh, telefone, cep, rua, bairro, cidade, estado;
+  private String cpf, telefone, cep, rua, bairro, cidade, estado;
   
   
   public Cliente(String cpf, String telefone, String cep, String rua, String bairro, String cidade, String estado) {

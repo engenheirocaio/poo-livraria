@@ -6,8 +6,6 @@
 package br.senac.tads.dao;
 
 import java.util.ArrayList;
-import java.util.Date;
-
 
 public interface CrudInterface<O> {
   
